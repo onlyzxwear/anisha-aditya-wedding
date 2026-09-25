@@ -24,9 +24,25 @@
       overflow-x: hidden;
     }
 
-    /* =========================
-       HERO SECTION
-    ========================== */
+    /* MUSIC BUTTON */
+
+    .music-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(61,43,37,0.4);
+      border-radius: 50%;
+      background: rgba(255,250,243,0.9);
+      color: #3d2b25;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    /* HERO */
 
     .hero {
       min-height: 100vh;
@@ -45,7 +61,7 @@
       width: 330px;
       height: 330px;
       border-radius: 50%;
-      background: rgba(210, 170, 130, 0.18);
+      background: rgba(210,170,130,0.18);
       top: -120px;
       left: -130px;
       animation: float 6s ease-in-out infinite;
@@ -57,7 +73,7 @@
       width: 300px;
       height: 300px;
       border-radius: 50%;
-      background: rgba(180, 120, 100, 0.12);
+      background: rgba(180,120,100,0.12);
       bottom: -120px;
       right: -120px;
       animation: float 7s ease-in-out infinite reverse;
@@ -75,7 +91,7 @@
       text-transform: uppercase;
       opacity: 0;
       animation: fadeUp 1.2s ease forwards;
-      animation-delay: 0.5s;
+      animation-delay: .5s;
     }
 
     .welcome {
@@ -89,7 +105,7 @@
 
     .names {
       margin-top: 25px;
-      font-size: clamp(50px, 14vw, 90px);
+      font-size: clamp(50px,14vw,90px);
       line-height: 1;
       font-weight: normal;
       opacity: 0;
@@ -102,7 +118,7 @@
       font-size: 28px;
       margin: 14px 0;
       font-style: italic;
-      opacity: 0.7;
+      opacity: .7;
     }
 
     .date {
@@ -130,44 +146,81 @@
       font-size: 12px;
       letter-spacing: 3px;
       opacity: 0;
-      animation:
-        fadeUp 1s ease forwards,
-        bounce 2s ease-in-out infinite;
-      animation-delay: 5.2s, 6.2s;
+      animation: fadeUp 1s ease forwards, bounce 2s ease-in-out infinite;
+      animation-delay: 5.2s,6.2s;
     }
 
-    /* =========================
-       EVENTS SECTION
-    ========================== */
+    /* COUNTDOWN */
 
-    .events {
-      padding: 90px 20px;
+    .countdown-section {
+      padding: 85px 20px;
       text-align: center;
       background: #fffaf3;
     }
 
-    .events-label {
+    .section-label {
       font-size: 13px;
       letter-spacing: 4px;
       text-transform: uppercase;
-      margin-bottom: 15px;
-      opacity: 0.75;
+      opacity: .7;
+    }
+
+    .countdown-title {
+      font-size: clamp(34px,8vw,50px);
+      font-weight: normal;
+      margin: 18px 0 45px;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .time-box {
+      width: 75px;
+      padding: 18px 8px;
+      background: #f8f1e8;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(60,40,30,.07);
+    }
+
+    .time-box strong {
+      display: block;
+      font-size: 28px;
+      font-weight: normal;
+    }
+
+    .time-box span {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: .65;
+    }
+
+    /* EVENTS */
+
+    .events {
+      padding: 90px 20px;
+      text-align: center;
+      background: #f8f1e8;
     }
 
     .events-title {
-      font-size: clamp(32px, 8vw, 48px);
+      font-size: clamp(32px,8vw,48px);
       font-weight: normal;
-      margin-bottom: 50px;
+      margin: 18px 0 50px;
     }
 
     .event-card {
       max-width: 430px;
       margin: 0 auto 25px;
       padding: 38px 20px;
-      background: #f8f1e8;
+      background: #fffaf3;
       border-radius: 25px;
-      box-shadow: 0 12px 35px rgba(60, 40, 30, 0.08);
-      transition: transform 0.3s ease;
+      box-shadow: 0 12px 35px rgba(60,40,30,.08);
+      transition: transform .3s ease;
     }
 
     .event-card:hover {
@@ -192,25 +245,16 @@
 
     .event-card .time {
       font-size: 14px;
-      opacity: 0.7;
+      opacity: .7;
       letter-spacing: 1px;
     }
 
-    /* =========================
-       VENUE
-    ========================== */
+    /* VENUE */
 
     .venue-section {
       padding: 85px 20px;
       text-align: center;
-      background: #f8f1e8;
-    }
-
-    .venue-label {
-      font-size: 13px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      opacity: 0.7;
+      background: #fffaf3;
     }
 
     .venue-title {
@@ -234,17 +278,9 @@
       border-radius: 30px;
       color: #3d2b25;
       text-decoration: none;
-      transition: 0.3s;
     }
 
-    .map-button:hover {
-      background: #3d2b25;
-      color: #fffaf3;
-    }
-
-    /* =========================
-       CLOSING
-    ========================== */
+    /* CLOSING */
 
     .closing {
       min-height: 55vh;
@@ -253,21 +289,15 @@
       justify-content: center;
       text-align: center;
       padding: 60px 20px;
-      background: #fffaf3;
+      background: #f8f1e8;
     }
 
     .closing-text {
       max-width: 600px;
     }
 
-    .closing-text .small {
-      font-size: 13px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-    }
-
     .closing-text h2 {
-      font-size: clamp(35px, 9vw, 58px);
+      font-size: clamp(35px,9vw,58px);
       font-weight: normal;
       margin: 22px 0;
     }
@@ -284,9 +314,7 @@
       letter-spacing: 2px;
     }
 
-    /* =========================
-       ANIMATIONS
-    ========================== */
+    /* ANIMATION */
 
     @keyframes fadeUp {
       from {
@@ -303,7 +331,7 @@
     @keyframes nameReveal {
       from {
         opacity: 0;
-        transform: scale(0.92);
+        transform: scale(.92);
         letter-spacing: 12px;
       }
 
@@ -315,7 +343,7 @@
     }
 
     @keyframes float {
-      0%, 100% {
+      0%,100% {
         transform: translateY(0);
       }
 
@@ -325,7 +353,7 @@
     }
 
     @keyframes bounce {
-      0%, 100% {
+      0%,100% {
         transform: translateX(-50%) translateY(0);
       }
 
@@ -334,30 +362,22 @@
       }
     }
 
-    /* =========================
-       MOBILE
-    ========================== */
-
-    @media (max-width: 600px) {
+    @media(max-width:600px) {
 
       .hero {
         min-height: 100svh;
-      }
-
-      .welcome {
-        font-size: 19px;
       }
 
       .names {
         font-size: 58px;
       }
 
-      .events {
-        padding-top: 75px;
+      .countdown-section {
+        padding-top: 70px;
       }
 
-      .event-card {
-        padding: 32px 18px;
+      .time-box {
+        width: 70px;
       }
 
       .venue-title {
@@ -368,6 +388,13 @@
 </head>
 
 <body>
+
+  <!-- MUSIC BUTTON -->
+
+  <button class="music-btn" onclick="toggleMusic()" id="musicButton">
+    ♫
+  </button>
+
 
   <!-- HERO -->
 
@@ -406,11 +433,50 @@
   </section>
 
 
+  <!-- COUNTDOWN -->
+
+  <section class="countdown-section">
+
+    <div class="section-label">
+      The Big Day
+    </div>
+
+    <h2 class="countdown-title">
+      Counting Every Moment
+    </h2>
+
+    <div class="countdown">
+
+      <div class="time-box">
+        <strong id="days">00</strong>
+        <span>Days</span>
+      </div>
+
+      <div class="time-box">
+        <strong id="hours">00</strong>
+        <span>Hours</span>
+      </div>
+
+      <div class="time-box">
+        <strong id="minutes">00</strong>
+        <span>Minutes</span>
+      </div>
+
+      <div class="time-box">
+        <strong id="seconds">00</strong>
+        <span>Seconds</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
   <!-- EVENTS -->
 
   <section class="events">
 
-    <div class="events-label">
+    <div class="section-label">
       Our Celebration
     </div>
 
@@ -425,9 +491,7 @@
         🌼
       </div>
 
-      <h3>
-        Haldi
-      </h3>
+      <h3>Haldi</h3>
 
       <div class="day">
         Monday, 23 November 2026
@@ -446,9 +510,7 @@
         🎶
       </div>
 
-      <h3>
-        Sangeet
-      </h3>
+      <h3>Sangeet</h3>
 
       <div class="day">
         Monday, 23 November 2026
@@ -467,9 +529,7 @@
         💍
       </div>
 
-      <h3>
-        Wedding
-      </h3>
+      <h3>Wedding</h3>
 
       <div class="day">
         Tuesday, 24 November 2026
@@ -488,7 +548,7 @@
 
   <section class="venue-section">
 
-    <div class="venue-label">
+    <div class="section-label">
       The Venue
     </div>
 
@@ -519,7 +579,7 @@
 
     <div class="closing-text">
 
-      <div class="small">
+      <div class="section-label">
         Save the Date
       </div>
 
@@ -539,6 +599,85 @@
     </div>
 
   </section>
+
+
+  <script>
+
+    /* COUNTDOWN */
+
+    const weddingDate =
+      new Date("November 24, 2026 19:00:00").getTime();
+
+    function updateCountdown() {
+
+      const now = new Date().getTime();
+
+      const distance = weddingDate - now;
+
+      if (distance <= 0) {
+        document.getElementById("days").innerText = "00";
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("minutes").innerText = "00";
+        document.getElementById("seconds").innerText = "00";
+        return;
+      }
+
+      const days = Math.floor(
+        distance / (1000 * 60 * 60 * 24)
+      );
+
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+      );
+
+      const minutes = Math.floor(
+        (distance % (1000 * 60 * 60))
+        / (1000 * 60)
+      );
+
+      const seconds = Math.floor(
+        (distance % (1000 * 60))
+        / 1000
+      );
+
+      document.getElementById("days").innerText =
+        String(days).padStart(2, "0");
+
+      document.getElementById("hours").innerText =
+        String(hours).padStart(2, "0");
+
+      document.getElementById("minutes").innerText =
+        String(minutes).padStart(2, "0");
+
+      document.getElementById("seconds").innerText =
+        String(seconds).padStart(2, "0");
+    }
+
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
+
+
+    /* MUSIC BUTTON */
+
+    let musicPlaying = false;
+
+    function toggleMusic() {
+
+      musicPlaying = !musicPlaying;
+
+      const button =
+        document.getElementById("musicButton");
+
+      if (musicPlaying) {
+        button.innerHTML = "❚❚";
+      } else {
+        button.innerHTML = "♫";
+      }
+    }
+
+  </script>
 
 </body>
 </html>
