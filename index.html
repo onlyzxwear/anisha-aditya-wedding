@@ -28,18 +28,18 @@
 
     .music-btn {
       position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
-      width: 48px;
-      height: 48px;
-      border: 1px solid rgba(61,43,37,0.4);
+      top: 18px;
+      right: 18px;
+      z-index: 9999;
+      width: 50px;
+      height: 50px;
+      border: 1px solid rgba(61,43,37,0.35);
       border-radius: 50%;
-      background: rgba(255,250,243,0.9);
+      background: rgba(255,250,243,0.95);
       color: #3d2b25;
       font-size: 20px;
       cursor: pointer;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
     }
 
     /* HERO */
@@ -50,7 +50,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 30px 20px;
+      padding: 35px 20px;
       position: relative;
       overflow: hidden;
     }
@@ -58,12 +58,12 @@
     .hero::before {
       content: "";
       position: absolute;
-      width: 330px;
-      height: 330px;
+      width: 340px;
+      height: 340px;
       border-radius: 50%;
       background: rgba(210,170,130,0.18);
-      top: -120px;
-      left: -130px;
+      top: -130px;
+      left: -140px;
       animation: float 6s ease-in-out infinite;
     }
 
@@ -95,12 +95,12 @@
     }
 
     .welcome {
-      margin-top: 25px;
-      font-size: 22px;
+      margin-top: 22px;
+      font-size: 21px;
       font-style: italic;
       opacity: 0;
       animation: fadeUp 1.2s ease forwards;
-      animation-delay: 1.4s;
+      animation-delay: 1.3s;
     }
 
     .names {
@@ -109,51 +109,53 @@
       line-height: 1;
       font-weight: normal;
       opacity: 0;
-      animation: nameReveal 1.6s ease forwards;
-      animation-delay: 2.3s;
+      animation: nameReveal 1.5s ease forwards;
+      animation-delay: 2.2s;
     }
 
     .amp {
       display: block;
       font-size: 28px;
-      margin: 14px 0;
+      margin: 13px 0;
       font-style: italic;
       opacity: .7;
     }
 
     .date {
-      margin-top: 35px;
+      margin-top: 30px;
       font-size: 17px;
       letter-spacing: 2px;
       opacity: 0;
       animation: fadeUp 1.2s ease forwards;
-      animation-delay: 3.8s;
+      animation-delay: 3.7s;
     }
 
     .venue {
-      margin-top: 12px;
+      margin-top: 10px;
       font-size: 16px;
       opacity: 0;
       animation: fadeUp 1.2s ease forwards;
-      animation-delay: 4.3s;
+      animation-delay: 4.2s;
     }
 
     .scroll {
       position: absolute;
-      bottom: 28px;
+      bottom: 25px;
       left: 50%;
       transform: translateX(-50%);
       font-size: 12px;
       letter-spacing: 3px;
       opacity: 0;
-      animation: fadeUp 1s ease forwards, bounce 2s ease-in-out infinite;
-      animation-delay: 5.2s,6.2s;
+      animation:
+        fadeUp 1s ease forwards,
+        bounce 2s ease-in-out infinite;
+      animation-delay: 5s, 6s;
     }
 
-    /* COUNTDOWN */
+    /* COUPLE */
 
-    .countdown-section {
-      padding: 85px 20px;
+    .couple {
+      padding: 90px 20px 80px;
       text-align: center;
       background: #fffaf3;
     }
@@ -165,10 +167,41 @@
       opacity: .7;
     }
 
+    .couple-title {
+      font-size: clamp(34px,8vw,52px);
+      font-weight: normal;
+      margin: 18px 0 30px;
+    }
+
+    .couple-image {
+      width: min(88vw, 470px);
+      display: block;
+      margin: 0 auto;
+      border-radius: 28px;
+      box-shadow: 0 18px 45px rgba(60,40,30,.15);
+      animation: gentleFloat 5s ease-in-out infinite;
+    }
+
+    .couple-text {
+      max-width: 550px;
+      margin: 30px auto 0;
+      font-size: 17px;
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    /* COUNTDOWN */
+
+    .countdown-section {
+      padding: 85px 20px;
+      text-align: center;
+      background: #f8f1e8;
+    }
+
     .countdown-title {
       font-size: clamp(34px,8vw,50px);
       font-weight: normal;
-      margin: 18px 0 45px;
+      margin: 18px 0 42px;
     }
 
     .countdown {
@@ -179,9 +212,9 @@
     }
 
     .time-box {
-      width: 75px;
+      width: 76px;
       padding: 18px 8px;
-      background: #f8f1e8;
+      background: #fffaf3;
       border-radius: 18px;
       box-shadow: 0 8px 25px rgba(60,40,30,.07);
     }
@@ -204,7 +237,7 @@
     .events {
       padding: 90px 20px;
       text-align: center;
-      background: #f8f1e8;
+      background: #fffaf3;
     }
 
     .events-title {
@@ -217,7 +250,7 @@
       max-width: 430px;
       margin: 0 auto 25px;
       padding: 38px 20px;
-      background: #fffaf3;
+      background: #f8f1e8;
       border-radius: 25px;
       box-shadow: 0 12px 35px rgba(60,40,30,.08);
       transition: transform .3s ease;
@@ -254,7 +287,7 @@
     .venue-section {
       padding: 85px 20px;
       text-align: center;
-      background: #fffaf3;
+      background: #f8f1e8;
     }
 
     .venue-title {
@@ -289,7 +322,7 @@
       justify-content: center;
       text-align: center;
       padding: 60px 20px;
-      background: #f8f1e8;
+      background: #fffaf3;
     }
 
     .closing-text {
@@ -314,7 +347,7 @@
       letter-spacing: 2px;
     }
 
-    /* ANIMATION */
+    /* ANIMATIONS */
 
     @keyframes fadeUp {
       from {
@@ -352,6 +385,16 @@
       }
     }
 
+    @keyframes gentleFloat {
+      0%,100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-7px);
+      }
+    }
+
     @keyframes bounce {
       0%,100% {
         transform: translateX(-50%) translateY(0);
@@ -372,7 +415,7 @@
         font-size: 58px;
       }
 
-      .countdown-section {
+      .couple {
         padding-top: 70px;
       }
 
@@ -389,9 +432,13 @@
 
 <body>
 
-  <!-- MUSIC BUTTON -->
+  <!-- MUSIC -->
 
-  <button class="music-btn" onclick="toggleMusic()" id="musicButton">
+  <audio id="weddingMusic" loop>
+    <source src="wedding-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="music-btn" id="musicButton" onclick="toggleMusic()">
     ♫
   </button>
 
@@ -429,6 +476,34 @@
     <div class="scroll">
       SCROLL TO BEGIN ↓
     </div>
+
+  </section>
+
+
+  <!-- COUPLE -->
+
+  <section class="couple">
+
+    <div class="section-label">
+      The Couple
+    </div>
+
+    <h2 class="couple-title">
+      Anisha & Aditya
+    </h2>
+
+    <img
+      src="bride-groom.png"
+      alt="Bride and Groom"
+      class="couple-image"
+    >
+
+    <p class="couple-text">
+      Two hearts, one beautiful journey,
+      and a lifetime of togetherness.
+      We invite you to celebrate this
+      special beginning with us.
+    </p>
 
   </section>
 
@@ -491,7 +566,9 @@
         🌼
       </div>
 
-      <h3>Haldi</h3>
+      <h3>
+        Haldi
+      </h3>
 
       <div class="day">
         Monday, 23 November 2026
@@ -510,7 +587,9 @@
         🎶
       </div>
 
-      <h3>Sangeet</h3>
+      <h3>
+        Sangeet
+      </h3>
 
       <div class="day">
         Monday, 23 November 2026
@@ -529,7 +608,9 @@
         💍
       </div>
 
-      <h3>Wedding</h3>
+      <h3>
+        Wedding
+      </h3>
 
       <div class="day">
         Tuesday, 24 November 2026
@@ -659,22 +740,30 @@
     setInterval(updateCountdown, 1000);
 
 
-    /* MUSIC BUTTON */
+    /* MUSIC */
 
-    let musicPlaying = false;
+    const music =
+      document.getElementById("weddingMusic");
+
+    const musicButton =
+      document.getElementById("musicButton");
 
     function toggleMusic() {
 
-      musicPlaying = !musicPlaying;
+      if (music.paused) {
 
-      const button =
-        document.getElementById("musicButton");
+        music.play();
 
-      if (musicPlaying) {
-        button.innerHTML = "❚❚";
+        musicButton.innerHTML = "❚❚";
+
       } else {
-        button.innerHTML = "♫";
+
+        music.pause();
+
+        musicButton.innerHTML = "♫";
+
       }
+
     }
 
   </script>
