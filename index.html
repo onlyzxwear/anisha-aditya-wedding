@@ -13,13 +13,20 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      min-height: 100vh;
       background: #f8f1e8;
       color: #3d2b25;
       font-family: Georgia, "Times New Roman", serif;
       overflow-x: hidden;
     }
+
+    /* =========================
+       HERO SECTION
+    ========================== */
 
     .hero {
       min-height: 100vh;
@@ -35,35 +42,35 @@
     .hero::before {
       content: "";
       position: absolute;
-      width: 320px;
-      height: 320px;
+      width: 330px;
+      height: 330px;
       border-radius: 50%;
       background: rgba(210, 170, 130, 0.18);
-      top: -100px;
-      left: -120px;
+      top: -120px;
+      left: -130px;
       animation: float 6s ease-in-out infinite;
     }
 
     .hero::after {
       content: "";
       position: absolute;
-      width: 280px;
-      height: 280px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       background: rgba(180, 120, 100, 0.12);
-      bottom: -100px;
-      right: -100px;
+      bottom: -120px;
+      right: -120px;
       animation: float 7s ease-in-out infinite reverse;
     }
 
-    .content {
+    .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 650px;
+      max-width: 700px;
     }
 
     .small-text {
-      font-size: 15px;
+      font-size: 14px;
       letter-spacing: 4px;
       text-transform: uppercase;
       opacity: 0;
@@ -73,38 +80,38 @@
 
     .welcome {
       margin-top: 25px;
-      font-size: 24px;
+      font-size: 22px;
       font-style: italic;
       opacity: 0;
       animation: fadeUp 1.2s ease forwards;
-      animation-delay: 1.5s;
+      animation-delay: 1.4s;
     }
 
     .names {
       margin-top: 25px;
-      font-size: clamp(48px, 13vw, 85px);
-      line-height: 1.05;
+      font-size: clamp(50px, 14vw, 90px);
+      line-height: 1;
       font-weight: normal;
       opacity: 0;
-      animation: nameReveal 1.5s ease forwards;
-      animation-delay: 2.5s;
+      animation: nameReveal 1.6s ease forwards;
+      animation-delay: 2.3s;
     }
 
     .amp {
       display: block;
       font-size: 28px;
-      margin: 12px 0;
+      margin: 14px 0;
       font-style: italic;
       opacity: 0.7;
     }
 
     .date {
-      margin-top: 30px;
-      font-size: 18px;
+      margin-top: 35px;
+      font-size: 17px;
       letter-spacing: 2px;
       opacity: 0;
       animation: fadeUp 1.2s ease forwards;
-      animation-delay: 4s;
+      animation-delay: 3.8s;
     }
 
     .venue {
@@ -112,26 +119,181 @@
       font-size: 16px;
       opacity: 0;
       animation: fadeUp 1.2s ease forwards;
-      animation-delay: 4.5s;
+      animation-delay: 4.3s;
     }
 
     .scroll {
       position: absolute;
-      bottom: 30px;
+      bottom: 28px;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 13px;
+      font-size: 12px;
       letter-spacing: 3px;
       opacity: 0;
-      animation: fadeUp 1s ease forwards, bounce 2s ease-in-out infinite;
-      animation-delay: 5.5s, 6.5s;
+      animation:
+        fadeUp 1s ease forwards,
+        bounce 2s ease-in-out infinite;
+      animation-delay: 5.2s, 6.2s;
     }
+
+    /* =========================
+       EVENTS SECTION
+    ========================== */
+
+    .events {
+      padding: 90px 20px;
+      text-align: center;
+      background: #fffaf3;
+    }
+
+    .events-label {
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      opacity: 0.75;
+    }
+
+    .events-title {
+      font-size: clamp(32px, 8vw, 48px);
+      font-weight: normal;
+      margin-bottom: 50px;
+    }
+
+    .event-card {
+      max-width: 430px;
+      margin: 0 auto 25px;
+      padding: 38px 20px;
+      background: #f8f1e8;
+      border-radius: 25px;
+      box-shadow: 0 12px 35px rgba(60, 40, 30, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .event-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .event-icon {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .event-card h3 {
+      font-size: 29px;
+      font-weight: normal;
+      margin-bottom: 13px;
+    }
+
+    .event-card .day {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .event-card .time {
+      font-size: 14px;
+      opacity: 0.7;
+      letter-spacing: 1px;
+    }
+
+    /* =========================
+       VENUE
+    ========================== */
+
+    .venue-section {
+      padding: 85px 20px;
+      text-align: center;
+      background: #f8f1e8;
+    }
+
+    .venue-label {
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    .venue-title {
+      font-size: 38px;
+      font-weight: normal;
+      margin: 18px 0;
+    }
+
+    .venue-address {
+      font-size: 17px;
+      line-height: 1.7;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .map-button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 13px 28px;
+      border: 1px solid #3d2b25;
+      border-radius: 30px;
+      color: #3d2b25;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .map-button:hover {
+      background: #3d2b25;
+      color: #fffaf3;
+    }
+
+    /* =========================
+       CLOSING
+    ========================== */
+
+    .closing {
+      min-height: 55vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background: #fffaf3;
+    }
+
+    .closing-text {
+      max-width: 600px;
+    }
+
+    .closing-text .small {
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .closing-text h2 {
+      font-size: clamp(35px, 9vw, 58px);
+      font-weight: normal;
+      margin: 22px 0;
+    }
+
+    .closing-text p {
+      font-size: 17px;
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .family {
+      margin-top: 25px;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    /* =========================
+       ANIMATIONS
+    ========================== */
 
     @keyframes fadeUp {
       from {
         opacity: 0;
         transform: translateY(25px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -142,8 +304,9 @@
       from {
         opacity: 0;
         transform: scale(0.92);
-        letter-spacing: 10px;
+        letter-spacing: 12px;
       }
+
       to {
         opacity: 1;
         transform: scale(1);
@@ -155,6 +318,7 @@
       0%, 100% {
         transform: translateY(0);
       }
+
       50% {
         transform: translateY(25px);
       }
@@ -164,8 +328,40 @@
       0%, 100% {
         transform: translateX(-50%) translateY(0);
       }
+
       50% {
         transform: translateX(-50%) translateY(8px);
+      }
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 600px) {
+
+      .hero {
+        min-height: 100svh;
+      }
+
+      .welcome {
+        font-size: 19px;
+      }
+
+      .names {
+        font-size: 58px;
+      }
+
+      .events {
+        padding-top: 75px;
+      }
+
+      .event-card {
+        padding: 32px 18px;
+      }
+
+      .venue-title {
+        font-size: 32px;
       }
     }
   </style>
@@ -173,9 +369,11 @@
 
 <body>
 
+  <!-- HERO -->
+
   <section class="hero">
 
-    <div class="content">
+    <div class="hero-content">
 
       <div class="small-text">
         A Beautiful Beginning
@@ -192,7 +390,7 @@
       </div>
 
       <div class="date">
-        24 November 2026
+        Tuesday, 24 November 2026
       </div>
 
       <div class="venue">
@@ -203,6 +401,141 @@
 
     <div class="scroll">
       SCROLL TO BEGIN ↓
+    </div>
+
+  </section>
+
+
+  <!-- EVENTS -->
+
+  <section class="events">
+
+    <div class="events-label">
+      Our Celebration
+    </div>
+
+    <h2 class="events-title">
+      Three Beautiful Moments
+    </h2>
+
+
+    <div class="event-card">
+
+      <div class="event-icon">
+        🌼
+      </div>
+
+      <h3>
+        Haldi
+      </h3>
+
+      <div class="day">
+        Monday, 23 November 2026
+      </div>
+
+      <div class="time">
+        10:30 AM onwards
+      </div>
+
+    </div>
+
+
+    <div class="event-card">
+
+      <div class="event-icon">
+        🎶
+      </div>
+
+      <h3>
+        Sangeet
+      </h3>
+
+      <div class="day">
+        Monday, 23 November 2026
+      </div>
+
+      <div class="time">
+        3:00 PM onwards
+      </div>
+
+    </div>
+
+
+    <div class="event-card">
+
+      <div class="event-icon">
+        💍
+      </div>
+
+      <h3>
+        Wedding
+      </h3>
+
+      <div class="day">
+        Tuesday, 24 November 2026
+      </div>
+
+      <div class="time">
+        7:00 PM onwards
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- VENUE -->
+
+  <section class="venue-section">
+
+    <div class="venue-label">
+      The Venue
+    </div>
+
+    <h2 class="venue-title">
+      Shripur, Ballia
+    </h2>
+
+    <p class="venue-address">
+      With the blessings of our families,
+      we invite you to celebrate this beautiful
+      beginning with us.
+    </p>
+
+    <a
+      class="map-button"
+      href="https://www.google.com/maps/search/?api=1&query=Shripur%2C%20Ballia"
+      target="_blank"
+    >
+      View Location
+    </a>
+
+  </section>
+
+
+  <!-- CLOSING -->
+
+  <section class="closing">
+
+    <div class="closing-text">
+
+      <div class="small">
+        Save the Date
+      </div>
+
+      <h2>
+        Anisha & Aditya
+      </h2>
+
+      <p>
+        Two hearts, one beautiful journey,
+        and a lifetime of togetherness.
+      </p>
+
+      <div class="family">
+        WITH LOVE & BLESSINGS — BANIYA PARIWAR
+      </div>
+
     </div>
 
   </section>
