@@ -2,41 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   
-  <title>Anisha & Aditya | Wedding Storybook 💍</title>
+  <title>Anisha & Aditya | Wedding Invitation 💍</title>
 
-  <meta name="description" content="Anisha & Aditya Wedding Storybook · 23 & 24 November 2026 · Shripur, Ballia.">
+  <meta name="description" content="Two hearts, one beautiful journey. Join us to celebrate the wedding of Anisha & Aditya on 23 & 24 November 2026 at Shripur, Ballia.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://onlyzxwear.github.io/anisha-aditya-wedding/">
-  <meta property="og:title" content="Anisha & Aditya | Royal Wedding Storybook 💍">
-  <meta property="og:description" content="॥ श्री गणेशाय नमः ॥ Turn the royal pages to witness our celebration.">
+  <meta property="og:title" content="Anisha & Aditya | Wedding Invitation 💍">
+  <meta property="og:description" content="॥ श्री गणेशाय नमः ॥ We invite you to celebrate our special beginning. 23 & 24 November 2026 · Shripur, Ballia.">
   <meta property="og:image" content="https://onlyzxwear.github.io/anisha-aditya-wedding/bride-groom.png">
+  <meta property="og:image:secure_url" content="https://onlyzxwear.github.io/anisha-aditya-wedding/bride-groom.png">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
-  <meta name="theme-color" content="#180a0e">
+  <meta name="theme-color" content="#12090b">
 
-  <!-- Luxury Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Rozha+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Rozha+One&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-dark: #120609;
-      --bg-parchment: #fdfaf3;
-      --gold-primary: #d4af37;
-      --gold-deep: #a07823;
-      --gold-border: rgba(212, 175, 55, 0.4);
-      --maroon-royal: #420f16;
-      --text-main: #2b1d19;
-      --text-muted: #6b554c;
+      --bg-cream: #fbf7f0;
+      --text-main: #2d1e18;
+      --text-muted: #6e574c;
+      --gold-primary: #cba143;
+      --gold-deep: #a67c2e;
+      --gold-border: rgba(203, 161, 67, 0.45);
+      --maroon-deep: #4a151b;
       --font-serif: 'Playfair Display', Georgia, serif;
       --font-display: 'Cinzel', serif;
       --font-script: 'Great Vibes', cursive;
       --font-sans: 'Montserrat', sans-serif;
-      --font-devanagari: 'Rozha One', serif;
+      --font-devanagari: 'Rozha One', 'Playfair Display', serif;
     }
 
     * {
@@ -44,185 +44,48 @@
       padding: 0;
       box-sizing: border-box;
       -webkit-tap-highlight-color: transparent;
-      user-select: none;
     }
 
-    body, html {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: var(--bg-dark);
-      font-family: var(--font-serif);
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      background-image: 
+        radial-gradient(circle at 50% 50%, rgba(203, 161, 67, 0.05) 10%, transparent 11%),
+        radial-gradient(circle at 0% 0%, rgba(203, 161, 67, 0.05) 10%, transparent 11%),
+        radial-gradient(circle at 100% 100%, rgba(203, 161, 67, 0.05) 10%, transparent 11%);
+      background-size: 32px 32px;
       color: var(--text-main);
+      font-family: var(--font-serif);
+      overflow-x: hidden;
+      line-height: 1.6;
     }
 
-    /* Ambient Luxury Palace Background */
-    .palace-ambient {
-      position: fixed;
-      inset: 0;
-      background: 
-        radial-gradient(circle at 50% 25%, rgba(212, 175, 55, 0.12) 0%, transparent 60%),
-        radial-gradient(circle at 50% 80%, rgba(66, 15, 22, 0.6) 0%, transparent 80%),
-        #120609;
-      z-index: 1;
-    }
-
-    /* Falling Petals Canvas */
     #petalsCanvas {
       position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 900;
-    }
-
-    /* Floating Navigation Controls */
-    .floating-header {
-      position: fixed;
-      top: 16px;
+      top: 0;
       left: 0;
-      right: 0;
-      padding: 0 18px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      pointer-events: auto;
-    }
-
-    .page-counter-badge {
-      background: rgba(24, 10, 14, 0.85);
-      border: 1px solid var(--gold-border);
-      border-radius: 20px;
-      padding: 6px 14px;
-      font-family: var(--font-sans);
-      font-size: 11px;
-      letter-spacing: 2px;
-      color: var(--gold-primary);
-      text-transform: uppercase;
-      backdrop-filter: blur(6px);
-    }
-
-    .music-btn {
-      width: 44px;
-      height: 44px;
-      border: 1px solid var(--gold-border);
-      border-radius: 50%;
-      background: rgba(24, 10, 14, 0.85);
-      color: var(--gold-primary);
-      font-size: 18px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    }
-
-    /* THE STORYBOOK WRAPPER */
-    .book-stage {
-      position: relative;
-      z-index: 10;
       width: 100vw;
       height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 70px 16px 80px;
-    }
-
-    .book-viewport {
-      width: min(100%, 450px);
-      height: min(100%, 720px);
-      position: relative;
-      perspective: 1500px;
-    }
-
-    .book-page {
-      position: absolute;
-      inset: 0;
-      background-color: var(--bg-parchment);
-      background-image: 
-        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.05) 12%, transparent 13%),
-        radial-gradient(circle at 0% 0%, rgba(212, 175, 55, 0.05) 12%, transparent 13%);
-      background-size: 28px 28px;
-      border: 2px solid var(--gold-border);
-      border-radius: 24px;
-      padding: 30px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), inset 0 0 30px rgba(212, 175, 55, 0.08);
-      overflow-y: auto;
-      overflow-x: hidden;
-      opacity: 0;
-      visibility: hidden;
-      transform: rotateY(-30deg) scale(0.92) translateX(40px);
-      transition: all 0.65s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-
-    /* Ornamental Card Corners */
-    .book-page::before,
-    .book-page::after {
-      content: "✤";
-      position: absolute;
-      color: var(--gold-primary);
-      font-size: 13px;
-    }
-    .book-page::before { top: 8px; left: 10px; }
-    .book-page::after { bottom: 8px; right: 10px; }
-
-    .book-page.active {
-      opacity: 1;
-      visibility: visible;
-      transform: rotateY(0deg) scale(1) translateX(0);
-      z-index: 20;
-    }
-
-    .book-page.prev-page {
-      transform: rotateY(30deg) scale(0.92) translateX(-40px);
-      opacity: 0;
-      visibility: hidden;
-    }
-
-    /* Common Page Typography & Elements */
-    .ganesha-icon {
-      width: 55px;
-      height: auto;
-      margin-bottom: 6px;
-      filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.3));
-    }
-
-    .ganesha-text {
-      font-family: var(--font-devanagari);
-      font-size: 17px;
-      color: var(--gold-deep);
-      letter-spacing: 1.5px;
-    }
-
-    .shlok-text {
-      font-family: var(--font-devanagari);
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-top: 2px;
+      pointer-events: none;
+      z-index: 9998;
     }
 
     .divider {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      margin: 12px auto;
+      gap: 12px;
+      margin: 18px auto;
       color: var(--gold-primary);
-      font-size: 12px;
+      font-size: 14px;
     }
     .divider::before,
     .divider::after {
       content: "";
-      width: 40px;
+      width: 50px;
       height: 1px;
       background: linear-gradient(to right, transparent, var(--gold-primary));
     }
@@ -230,631 +93,883 @@
       background: linear-gradient(to left, transparent, var(--gold-primary));
     }
 
-    .guest-tag {
-      font-family: var(--font-sans);
-      font-size: 12px;
-      letter-spacing: 2px;
-      color: var(--maroon-royal);
-      background: rgba(212, 175, 55, 0.15);
-      border: 1px solid var(--gold-border);
-      border-radius: 20px;
-      padding: 5px 14px;
-      font-weight: 700;
-      margin-top: 10px;
-      text-transform: uppercase;
+    .ganesha-symbol {
+      width: 65px;
+      height: auto;
+      margin: 0 auto 8px;
+      filter: drop-shadow(0 2px 8px rgba(203, 161, 67, 0.35));
+      display: block;
     }
 
-    /* PAGE 1: COVER */
-    .cover-eyebrow {
+    .ganesha-mantra {
+      font-family: var(--font-devanagari);
+      font-size: 17px;
+      letter-spacing: 2px;
+      color: var(--gold-primary);
+    }
+
+    .shlok-sub {
+      font-family: var(--font-devanagari);
+      font-size: 13px;
+      color: #dfcfc2;
+      font-weight: normal;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* OPENING SCREEN */
+    .opening {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: radial-gradient(circle at 50% 40%, #291217 0%, #15080c 60%, #090204 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      transition: opacity 1.3s cubic-bezier(0.65, 0, 0.35, 1), visibility 1.3s ease;
+    }
+
+    .opening.hide {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .opening-card {
+      position: relative;
+      z-index: 2;
+      width: min(92%, 580px);
+      padding: 38px 24px;
+      border: 2px solid var(--gold-border);
+      border-radius: 24px;
+      background: rgba(18, 8, 11, 0.88);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85);
+    }
+
+    .guest-welcome-badge {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      letter-spacing: 2.5px;
+      color: #fce38a;
+      text-transform: uppercase;
+      margin: 14px 0 8px;
+      font-weight: 700;
+      text-shadow: 0 0 12px rgba(252, 227, 138, 0.5);
+    }
+
+    .opening-badge {
       font-family: var(--font-sans);
       font-size: 11px;
       letter-spacing: 4px;
       text-transform: uppercase;
-      color: var(--gold-deep);
-      margin-top: 8px;
-    }
-
-    .cover-names {
-      font-family: var(--font-display);
-      font-size: clamp(38px, 9vw, 54px);
-      color: var(--maroon-royal);
-      font-weight: 800;
-      line-height: 1.1;
-      margin: 12px 0 6px;
-    }
-
-    .cover-names .amp {
-      font-family: var(--font-script);
-      display: block;
-      font-size: 34px;
       color: var(--gold-primary);
-      margin: 2px 0;
+      min-height: 18px;
     }
 
-    .cover-date {
-      font-family: var(--font-sans);
-      font-size: 14px;
-      letter-spacing: 2px;
-      font-weight: 600;
-      color: var(--text-main);
-    }
-
-    .cover-venue {
-      font-size: 14px;
-      color: var(--text-muted);
-      margin-top: 2px;
-    }
-
-    .turn-hint {
-      margin-top: 24px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-sans);
-      font-size: 11px;
-      letter-spacing: 2px;
-      color: var(--gold-deep);
-      border: 1px solid var(--gold-border);
-      border-radius: 30px;
-      padding: 8px 18px;
-      background: #ffffff;
-      animation: pulseBtn 2s infinite alternate;
-    }
-
-    @keyframes pulseBtn {
-      0% { transform: scale(1); box-shadow: 0 0 0 rgba(212, 175, 55, 0); }
-      100% { transform: scale(1.04); box-shadow: 0 0 15px rgba(212, 175, 55, 0.35); }
-    }
-
-    /* PAGE 2: VIDEO FRAME */
-    .video-frame {
-      width: 100%;
-      max-width: 320px;
-      height: 380px;
-      border-radius: 20px;
-      overflow: hidden;
-      border: 4px solid #ffffff;
-      box-shadow: 0 15px 40px rgba(43, 29, 25, 0.2);
-      background: #000;
-      margin: 10px auto;
-      position: relative;
-    }
-
-    .video-frame video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .page-quote {
-      font-size: 15px;
-      font-style: italic;
-      color: var(--text-muted);
-      line-height: 1.6;
-      max-width: 340px;
-      margin: 10px auto 0;
-    }
-
-    /* PAGE 3: EVENTS CARDS */
-    .events-column {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 8px;
-    }
-
-    .event-mini-card {
-      padding: 14px 16px;
-      border-radius: 16px;
-      border: 1px solid var(--gold-border);
-      text-align: left;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #ffffff;
-    }
-
-    .event-mini-card.haldi { background: linear-gradient(135deg, #fffdf2 0%, #fff6d9 100%); }
-    .event-mini-card.sangeet { background: linear-gradient(135deg, #fdf8f9 0%, #faedf0 100%); }
-    .event-mini-card.wedding { background: linear-gradient(135deg, #fffdf8 0%, #faecd7 100%); border: 1.5px solid var(--gold-primary); }
-
-    .event-info h4 {
-      font-family: var(--font-display);
+    .opening-blessing {
+      color: #dfcfc2;
       font-size: 16px;
-      color: var(--maroon-royal);
-    }
-    .event-info p {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .mini-cal-btn {
-      padding: 7px 12px;
-      background: #ffffff;
-      border: 1px solid var(--gold-deep);
-      border-radius: 20px;
-      font-family: var(--font-sans);
-      font-size: 10px;
-      font-weight: 600;
-      text-decoration: none;
-      color: var(--text-main);
-      white-space: nowrap;
-    }
-
-    /* PAGE 4: VENUE & COUNTDOWN */
-    .countdown-mini-grid {
-      display: flex;
-      gap: 8px;
-      justify-content: center;
-      margin: 14px 0 20px;
-    }
-
-    .time-chip {
-      width: 65px;
-      padding: 10px 4px;
-      background: #ffffff;
-      border: 1px solid var(--gold-border);
-      border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-    }
-
-    .time-chip strong {
-      display: block;
-      font-family: var(--font-display);
-      font-size: 20px;
-      color: var(--maroon-royal);
-    }
-
-    .time-chip span {
-      font-family: var(--font-sans);
-      font-size: 8px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-
-    .venue-box {
-      background: #ffffff;
-      padding: 16px;
-      border-radius: 16px;
-      border: 1px solid var(--gold-border);
-      margin-bottom: 16px;
-    }
-
-    .map-btn-big {
-      display: inline-block;
-      padding: 12px 28px;
-      background: var(--maroon-royal);
-      color: #ffffff;
-      border-radius: 30px;
-      font-family: var(--font-sans);
-      font-size: 11px;
-      letter-spacing: 1.5px;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 4px 15px rgba(66, 15, 22, 0.3);
-    }
-
-    /* PAGE 5: VIP TOOL & WHATSAPP RSVP */
-    .generator-panel {
-      width: 100%;
-      background: #ffffff;
-      border: 1px dashed var(--gold-primary);
-      border-radius: 16px;
-      padding: 14px;
+      font-style: italic;
+      min-height: 26px;
       margin-bottom: 14px;
     }
 
-    .tags-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      justify-content: center;
-      margin: 8px 0;
+    .opening-names {
+      font-family: var(--font-display);
+      font-size: clamp(34px, 8vw, 56px);
+      font-weight: 700;
+      color: #fff6e8;
+      letter-spacing: 2px;
+      line-height: 1.15;
+      text-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+      min-height: 65px;
     }
 
-    .tag-chip {
-      padding: 5px 10px;
-      background: #fbf7f0;
-      border: 1px solid var(--gold-border);
-      border-radius: 14px;
-      font-family: var(--font-sans);
-      font-size: 10px;
-      cursor: pointer;
-    }
-
-    .generator-input {
-      width: 100%;
-      padding: 9px 12px;
-      border: 1px solid var(--gold-border);
-      border-radius: 20px;
-      font-family: var(--font-serif);
-      font-size: 13px;
-      text-align: center;
-      outline: none;
-      margin: 6px 0 8px;
-    }
-
-    .copy-invite-btn {
-      width: 100%;
-      padding: 10px;
-      background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
-      color: #fff;
-      border: none;
-      border-radius: 20px;
-      font-family: var(--font-sans);
-      font-size: 11px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .rsvp-mini-buttons {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .rsvp-wa-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      padding: 10px;
-      background: #25d366;
-      color: #fff;
-      border-radius: 24px;
-      font-family: var(--font-sans);
-      font-size: 11px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
-    }
-
-    /* Bottom Navigation Pagination Bar */
-    .bottom-bar {
-      position: fixed;
-      bottom: 14px;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      z-index: 1000;
-      pointer-events: auto;
-    }
-
-    .nav-arrow {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: rgba(24, 10, 14, 0.9);
-      border: 1px solid var(--gold-border);
+    .opening-names .amp {
+      font-family: var(--font-script);
+      font-size: 0.75em;
       color: var(--gold-primary);
+      display: inline-block;
+      margin: 0 6px;
+    }
+
+    .opening-date {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #d1b89d;
+      margin-top: 14px;
+      min-height: 20px;
+    }
+
+    .typing-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1em;
+      background: var(--gold-primary);
+      margin-left: 3px;
+      vertical-align: middle;
+      animation: blink 0.75s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .open-btn-container {
+      margin-top: 26px;
+      opacity: 0;
+      transform: translateY(15px);
+      transition: all 1s ease;
+    }
+
+    .open-btn-container.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .open-btn {
+      padding: 14px 36px;
+      border: 1px solid var(--gold-primary);
+      border-radius: 50px;
+      background: transparent;
+      color: #fff5e6;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      cursor: pointer;
+      box-shadow: 0 0 25px rgba(203, 161, 67, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .open-btn:hover {
+      background: var(--gold-primary);
+      color: #12090b;
+      box-shadow: 0 0 35px rgba(203, 161, 67, 0.7);
+      transform: translateY(-2px);
+    }
+
+    /* MUSIC BUTTON */
+    .music-btn {
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      z-index: 9999;
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--gold-border);
+      border-radius: 50%;
+      background: rgba(255, 252, 248, 0.95);
+      color: var(--text-main);
       font-size: 18px;
       cursor: pointer;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
       display: flex;
       align-items: center;
       justify-content: center;
       backdrop-filter: blur(8px);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
-      transition: transform 0.2s ease;
     }
-    .nav-arrow:active { transform: scale(0.9); }
 
-    .dots-indicator {
+    /* HERO */
+    .hero {
+      min-height: 100vh;
       display: flex;
-      gap: 8px;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 20px 40px;
+      position: relative;
     }
 
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: rgba(212, 175, 55, 0.3);
-      cursor: pointer;
+    .hero-card {
+      width: min(92%, 620px);
+      padding: 42px 24px;
+      border: 2px solid var(--gold-border);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(6px);
+      border-radius: 28px;
+      box-shadow: 0 16px 50px rgba(61, 43, 37, 0.08);
+      position: relative;
+    }
+
+    .hero-sub {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      margin-bottom: 8px;
+    }
+
+    .hero-blessing {
+      font-size: 18px;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .hero-names {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 10vw, 76px);
+      color: var(--maroon-deep);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+
+    .hero-names .amp {
+      font-family: var(--font-script);
+      display: block;
+      font-size: 36px;
+      color: var(--gold-primary);
+      margin: 2px 0;
+    }
+
+    .hero-date {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      letter-spacing: 2px;
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .hero-venue {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .scroll-hint {
+      margin-top: 30px;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      color: var(--text-muted);
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    /* COUPLE & VIDEO SECTION */
+    .couple {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .section-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      margin-bottom: 6px;
+    }
+
+    .section-heading {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 5.5vw, 40px);
+      font-weight: 600;
+      color: var(--maroon-deep);
+      margin-bottom: 18px;
+    }
+
+    .media-container {
+      width: min(88vw, 420px);
+      margin: 0 auto;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 18px 50px rgba(61, 43, 37, 0.16);
+      border: 5px solid #ffffff;
+      background: #11080a;
+    }
+
+    .couple-video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 19px;
+    }
+
+    .couple-text {
+      max-width: 520px;
+      margin: 24px auto 0;
+      font-size: 16px;
+      font-style: italic;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* COUNTDOWN */
+    .countdown-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .time-box {
+      width: 74px;
+      padding: 16px 6px;
+      background: #ffffff;
+      border-radius: 18px;
+      border: 1px solid var(--gold-border);
+      box-shadow: 0 6px 20px rgba(61, 43, 37, 0.05);
+    }
+
+    .time-box strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--maroon-deep);
+    }
+
+    .time-box span {
+      font-family: var(--font-sans);
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 4px;
+      display: block;
+    }
+
+    /* EVENTS */
+    .events {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .events-grid {
+      max-width: 540px;
+      margin: 30px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .event-card {
+      padding: 32px 22px;
+      border-radius: 22px;
+      border: 1px solid var(--gold-border);
+      box-shadow: 0 10px 32px rgba(61, 43, 37, 0.06);
+      position: relative;
+    }
+
+    .event-haldi { background: linear-gradient(180deg, #fffbf0 0%, #fff6db 100%); }
+    .event-sangeet { background: linear-gradient(180deg, #fdf8f9 0%, #faeef0 100%); }
+    .event-wedding { background: linear-gradient(180deg, #fffdf8 0%, #faecd7 100%); border: 2px solid var(--gold-primary); }
+
+    .event-icon {
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .event-card h3 {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--maroon-deep);
+      margin-bottom: 4px;
+    }
+
+    .event-card .day {
+      font-size: 15px;
+      color: var(--text-main);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .event-card .time {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .cal-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 20px;
+      border-radius: 30px;
+      border: 1px solid var(--gold-deep);
+      background: #ffffff;
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .cal-btn:hover {
+      background: var(--gold-primary);
+      color: #ffffff;
+    }
+
+    /* VENUE */
+    .venue-section {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .venue-address {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 480px;
+      margin: 0 auto 24px;
+    }
+
+    .map-button {
+      display: inline-block;
+      padding: 14px 34px;
+      border-radius: 40px;
+      background: var(--maroon-deep);
+      color: #ffffff;
+      font-family: var(--font-sans);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-decoration: none;
       transition: all 0.3s ease;
     }
 
-    .dot.active {
-      width: 22px;
-      border-radius: 8px;
+    .map-button:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+    }
+
+    /* =========================================
+       CUSTOMIZE INVITATION TOOL (RELATIVES + FRIENDS + SIBLINGS)
+    ========================================= */
+    .custom-invite-tool {
+      padding: 75px 20px;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    .tool-box {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 36px 22px;
+      border: 2px dashed var(--gold-primary);
+      border-radius: 24px;
+      background: #faf6f0;
+      box-shadow: 0 12px 35px rgba(203, 161, 67, 0.12);
+    }
+
+    .tool-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .category-label {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      font-weight: 700;
+      margin: 12px 0 6px;
+      text-align: left;
+    }
+
+    .quick-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-start;
+      margin-bottom: 14px;
+    }
+
+    .tag-btn {
+      padding: 7px 13px;
+      border: 1px solid var(--gold-border);
+      border-radius: 20px;
+      background: #ffffff;
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tag-btn:hover {
       background: var(--gold-primary);
-      box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+      color: #ffffff;
+    }
+
+    .custom-input {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid var(--gold-border);
+      border-radius: 30px;
+      font-family: var(--font-serif);
+      font-size: 15px;
+      outline: none;
+      background: #ffffff;
+      color: var(--text-main);
+      margin: 14px 0 16px;
+      text-align: center;
+    }
+
+    .custom-input:focus {
+      border-color: var(--gold-deep);
+      box-shadow: 0 0 10px rgba(203, 161, 67, 0.25);
+    }
+
+    .create-link-btn {
+      width: 100%;
+      padding: 14px 20px;
+      background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+      color: #ffffff;
+      border: none;
+      border-radius: 30px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(184, 134, 11, 0.25);
+      transition: transform 0.2s ease;
+    }
+
+    .create-link-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* RSVP */
+    .rsvp-section {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .rsvp-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 460px;
+      margin: 0 auto 26px;
+    }
+
+    .rsvp-buttons-group {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+
+    .whatsapp-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 20px;
+      background: #25d366;
+      color: #ffffff;
+      border-radius: 40px;
+      text-decoration: none;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.22);
+    }
+
+    .whatsapp-btn svg {
+      width: 19px;
+      height: 19px;
+      fill: currentColor;
+    }
+
+    /* CLOSING */
+    .closing {
+      padding: 70px 20px;
+      text-align: center;
+      background: linear-gradient(180deg, var(--bg-cream) 0%, #f4e9da 100%);
+    }
+
+    .closing-text h2 {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 6.5vw, 46px);
+      font-weight: 600;
+      color: var(--maroon-deep);
+      margin: 10px 0;
+    }
+
+    .family-signature {
+      margin-top: 24px;
+      font-family: var(--font-sans);
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      font-weight: 700;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="palace-ambient"></div>
   <canvas id="petalsCanvas"></canvas>
 
-  <!-- Audio Element -->
+  <div class="opening" id="openingOverlay">
+    <div class="opening-card">
+      <svg class="ganesha-symbol" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 15 C45 15 38 20 38 28 C38 35 44 40 48 42 C45 44 40 48 40 55 C40 68 52 75 52 82 C52 86 50 88 48 88" stroke="#d4af37" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M53 25 C58 25 64 29 64 36 C64 43 56 48 56 54 C56 60 62 65 62 72 C62 78 57 82 52 82" stroke="#d4af37" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="50" cy="20" r="3" fill="#d4af37"/>
+        <path d="M35 32 C30 35 25 42 28 50 C30 55 35 56 38 54" stroke="#d4af37" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M65 32 C70 35 75 42 72 50 C70 55 65 56 62 54" stroke="#d4af37" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M48 28 Q50 32 52 28" stroke="#d4af37" stroke-width="2"/>
+      </svg>
+      <div class="ganesha-mantra">॥ श्री गणेशाय नमः ॥</div>
+      <div class="shlok-sub">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥</div>
+
+      <div class="divider">✦ ✤ ✦</div>
+
+      <div class="guest-welcome-badge" id="guestGreeting"></div>
+
+      <div class="opening-badge" id="typeBadge"></div>
+      <div class="opening-blessing" id="typeBlessing"></div>
+      <div class="opening-names" id="typeNames"></div>
+      <div class="opening-date" id="typeDate"></div>
+
+      <div class="open-btn-container" id="openBtnWrap">
+        <button class="open-btn" onclick="openInvitation()">
+          OPEN INVITATION 💍
+        </button>
+      </div>
+    </div>
+  </div>
+
   <audio id="weddingMusic" loop preload="auto">
     <source src="wedding-song.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- Top Floating Controls -->
-  <div class="floating-header">
-    <div class="page-counter-badge" id="pageCounter">PAGE 1 OF 5</div>
-    <button class="music-btn" id="musicToggleBtn" onclick="toggleMusic()">♫</button>
-  </div>
+  <button class="music-btn" id="musicToggleBtn" onclick="toggleMusic()" aria-label="Toggle Music">
+    ♫
+  </button>
 
-  <!-- 3D MAGAZINE STORYBOOK STAGE -->
-  <main class="book-stage">
-    <div class="book-viewport" id="bookViewport">
+  <section class="hero">
+    <div class="hero-card">
+      <svg class="ganesha-symbol" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 15 C45 15 38 20 38 28 C38 35 44 40 48 42 C45 44 40 48 40 55 C40 68 52 75 52 82 C52 86 50 88 48 88" stroke="#cba143" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M53 25 C58 25 64 29 64 36 C64 43 56 48 56 54 C56 60 62 65 62 72 C62 78 57 82 52 82" stroke="#cba143" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="50" cy="20" r="3" fill="#cba143"/>
+        <path d="M35 32 C30 35 25 42 28 50 C30 55 35 56 38 54" stroke="#cba143" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M65 32 C70 35 75 42 72 50 C70 55 65 56 62 54" stroke="#cba143" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M48 28 Q50 32 52 28" stroke="#cba143" stroke-width="2"/>
+      </svg>
+      <div class="ganesha-mantra">॥ श्री गणेशाय नमः ॥</div>
+      
+      <div class="divider">✦ ✤ ✦</div>
 
-      <!-- ================= PAGE 1: COVER ================= -->
-      <section class="book-page active" data-page="1">
-        <svg class="ganesha-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 15 C45 15 38 20 38 28 C38 35 44 40 48 42 C45 44 40 48 40 55 C40 68 52 75 52 82 C52 86 50 88 48 88" stroke="#d4af37" stroke-width="3.5" stroke-linecap="round"/>
-          <path d="M53 25 C58 25 64 29 64 36 C64 43 56 48 56 54 C56 60 62 65 62 72 C62 78 57 82 52 82" stroke="#d4af37" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="50" cy="20" r="3" fill="#d4af37"/>
-          <path d="M35 32 C30 35 25 42 28 50 C30 55 35 56 38 54" stroke="#d4af37" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M65 32 C70 35 75 42 72 50 C70 55 65 56 62 54" stroke="#d4af37" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M48 28 Q50 32 52 28" stroke="#d4af37" stroke-width="2"/>
-        </svg>
-        <div class="ganesha-text">॥ श्री गणेशाय नमः ॥</div>
-        <div class="shlok-text">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।</div>
+      <div class="hero-sub">A Beautiful Beginning</div>
+      <div class="hero-blessing">With the love, joy & blessings of our families</div>
+      <div class="hero-names">
+        Anisha
+        <span class="amp">&</span>
+        Aditya
+      </div>
 
-        <div class="divider">✦ ✤ ✦</div>
+      <div class="divider">✦ ✤ ✦</div>
 
-        <!-- VIP Personalized Badge -->
-        <div class="guest-tag" id="coverGuestName">ROYAL INVITATION</div>
+      <div class="hero-date">Tuesday, 24 November 2026</div>
+      <div class="hero-venue">Shripur, Ballia</div>
+    </div>
 
-        <div class="cover-eyebrow">A Beautiful Beginning</div>
-        <h1 class="cover-names">
-          Anisha
-          <span class="amp">&</span>
-          Aditya
-        </h1>
+    <div class="scroll-hint">SCROLL TO CELEBRATE ↓</div>
+  </section>
 
-        <div class="divider">✦ ✤ ✦</div>
+  <section class="couple">
+    <div class="section-eyebrow">The Royal Couple</div>
+    <h2 class="section-heading">Anisha & Aditya</h2>
 
-        <div class="cover-date">Tuesday, 24 November 2026</div>
-        <div class="cover-venue">Shripur, Ballia</div>
+    <div class="divider">✦ ✤ ✦</div>
 
-        <div class="turn-hint" onclick="changePage(1)">
-          Turn Page ➔
-        </div>
-      </section>
+    <div class="media-container">
+      <video class="couple-video" autoplay loop muted playsinline poster="bride-groom.png">
+        <source src="wedding-video.mp4" type="video/mp4">
+        <img src="bride-groom.png" alt="Anisha & Aditya" style="width:100%; display:block;">
+      </video>
+    </div>
 
-      <!-- ================= PAGE 2: VIDEO CINEMATIC ================= -->
-      <section class="book-page" data-page="2">
-        <div class="cover-eyebrow">The Royal Couple</div>
-        <div class="divider">✦ ✤ ✦</div>
+    <p class="couple-text">
+      "Two hearts, one beautiful journey, and a lifetime of togetherness.
+      We cordially invite you and your family to bless the couple as they unite in holy matrimony."
+    </p>
+  </section>
 
-        <div class="video-frame">
-          <video id="coupleVideo" autoplay loop muted playsinline poster="bride-groom.png">
-            <source src="wedding-video.mp4" type="video/mp4">
-            <img src="bride-groom.png" alt="Anisha & Aditya" style="width:100%; height:100%; object-fit:cover;">
-          </video>
-        </div>
+  <section class="countdown-section">
+    <div class="section-eyebrow">The Big Day</div>
+    <h2 class="section-heading">Counting Every Moment</h2>
 
-        <p class="page-quote">
-          "Two hearts, one beautiful journey, and a lifetime of togetherness."
-        </p>
+    <div class="divider">✦ ✤ ✦</div>
 
-        <div class="turn-hint" onclick="changePage(1)">
-          See Auspicious Events ➔
-        </div>
-      </section>
+    <div class="countdown">
+      <div class="time-box">
+        <strong id="days">00</strong>
+        <span>Days</span>
+      </div>
+      <div class="time-box">
+        <strong id="hours">00</strong>
+        <span>Hours</span>
+      </div>
+      <div class="time-box">
+        <strong id="minutes">00</strong>
+        <span>Minutes</span>
+      </div>
+      <div class="time-box">
+        <strong id="seconds">00</strong>
+        <span>Seconds</span>
+      </div>
+    </div>
+  </section>
 
-      <!-- ================= PAGE 3: EVENTS ================= -->
-      <section class="book-page" data-page="3">
-        <div class="cover-eyebrow">Auspicious Celebrations</div>
-        <h2 style="font-family:var(--font-display); font-size:22px; color:var(--maroon-royal); margin-top:4px;">Wedding Functions</h2>
-        <div class="divider">✦ ✤ ✦</div>
+  <section class="events">
+    <div class="section-eyebrow">Our Celebration</div>
+    <h2 class="section-heading">Three Auspicious Moments</h2>
 
-        <div class="events-column">
-          <!-- Haldi -->
-          <div class="event-mini-card haldi">
-            <div class="event-info">
-              <h4>🌼 Haldi</h4>
-              <p>Mon, 23 Nov 2026 · 10:30 AM</p>
-            </div>
-            <a class="mini-cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Haldi+-+Anisha+%26+Aditya+Wedding&dates=20261123T050000Z/20261123T080000Z&details=Haldi+Ceremony&location=Shripur%2C+Ballia" target="_blank">
-              📅 Add
-            </a>
-          </div>
+    <div class="divider">✦ ✤ ✦</div>
 
-          <!-- Sangeet -->
-          <div class="event-mini-card sangeet">
-            <div class="event-info">
-              <h4>🎶 Sangeet & Rings</h4>
-              <p>Mon, 23 Nov 2026 · 3:00 PM</p>
-            </div>
-            <a class="mini-cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sangeet+-+Anisha+%26+Aditya+Wedding&dates=20261123T093000Z/20261123T140000Z&details=Sangeet+Function&location=Shripur%2C+Ballia" target="_blank">
-              📅 Add
-            </a>
-          </div>
-
-          <!-- Vivah -->
-          <div class="event-mini-card wedding">
-            <div class="event-info">
-              <h4>💍 Vivah Sanskar</h4>
-              <p>Tue, 24 Nov 2026 · 7:00 PM</p>
-            </div>
-            <a class="mini-cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+-+Anisha+%26+Aditya&dates=20261124T133000Z/20261124T183000Z&details=Wedding+Ceremony&location=Shripur%2C+Ballia" target="_blank">
-              📅 Add
-            </a>
-          </div>
-        </div>
-
-        <div class="turn-hint" onclick="changePage(1)">
-          Venue & Directions ➔
-        </div>
-      </section>
-
-      <!-- ================= PAGE 4: VENUE & COUNTDOWN ================= -->
-      <section class="book-page" data-page="4">
-        <div class="cover-eyebrow">Counting The Moments</div>
-        <div class="countdown-mini-grid">
-          <div class="time-chip"><strong id="days">00</strong><span>Days</span></div>
-          <div class="time-chip"><strong id="hours">00</strong><span>Hours</span></div>
-          <div class="time-chip"><strong id="minutes">00</strong><span>Mins</span></div>
-          <div class="time-chip"><strong id="seconds">00</strong><span>Secs</span></div>
-        </div>
-
-        <div class="divider">✦ ✤ ✦</div>
-
-        <div class="venue-box">
-          <div style="font-size:24px; margin-bottom:4px;">📍</div>
-          <h3 style="font-family:var(--font-display); font-size:18px; color:var(--maroon-royal);">Shripur, Ballia</h3>
-          <p style="font-size:12px; color:var(--text-muted); margin-top:4px;">
-            Aapki aashirwaad-bhari upsthiti hamare parivaar ke liye mangalkaari hogi.
-          </p>
-        </div>
-
-        <a class="map-btn-big" href="https://www.google.com/maps/search/?api=1&query=Shripur%2C%20Ballia" target="_blank">
-          Open Google Maps Navigation
+    <div class="events-grid">
+      <div class="event-card event-haldi">
+        <div class="event-icon">🌼</div>
+        <h3>Haldi Ceremony</h3>
+        <div class="day">Monday, 23 November 2026</div>
+        <div class="time">10:30 AM onwards</div>
+        <a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Haldi+-+Anisha+%26+Aditya+Wedding&dates=20261123T050000Z/20261123T080000Z&details=Haldi+Ceremony+of+Anisha+%26+Aditya&location=Shripur%2C+Ballia" target="_blank">
+          📅 Add Haldi to Calendar
         </a>
+      </div>
 
-        <div class="turn-hint" onclick="changePage(1)">
-          Confirm Attendance / RSVP ➔
-        </div>
-      </section>
+      <div class="event-card event-sangeet">
+        <div class="event-icon">🎶</div>
+        <h3>Sangeet & Rings</h3>
+        <div class="day">Monday, 23 November 2026</div>
+        <div class="time">3:00 PM onwards</div>
+        <a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sangeet+-+Anisha+%26+Aditya+Wedding&dates=20261123T093000Z/20261123T140000Z&details=Sangeet+Celebration+of+Anisha+%26+Aditya&location=Shripur%2C+Ballia" target="_blank">
+          📅 Add Sangeet to Calendar
+        </a>
+      </div>
 
-      <!-- ================= PAGE 5: VIP TOOL & RSVP ================= -->
-      <section class="book-page" data-page="5">
-        <div class="cover-eyebrow">Personalized Invite Desk</div>
-        <div class="divider">✦ ✤ ✦</div>
-
-        <div class="generator-panel">
-          <p style="font-size:11px; color:var(--text-muted);">Rishtedaar / Doston ka customized WhatsApp link banayein:</p>
-          
-          <div class="tags-container">
-            <span class="tag-chip" onclick="setGuestData('Aadarneeya Mama Ji & Mami Ji', 'respect')">🌸 Mama Ji</span>
-            <span class="tag-chip" onclick="setGuestData('Aadarneeya Nana Ji & Nani Ji', 'respect')">🌸 Nana Ji</span>
-            <span class="tag-chip" onclick="setGuestData('Aadarneeya Chacha Ji & Chachi Ji', 'respect')">🌸 Chacha Ji</span>
-            <span class="tag-chip" onclick="setGuestData('Mere Pyare Dost / Yaar', 'friend')">🥂 Pyare Dost</span>
-            <span class="tag-chip" onclick="setGuestData('Mere Pyare Bhai', 'friend')">❤️ Pyare Bhai</span>
-          </div>
-
-          <input type="text" id="guestInputBox" class="generator-input" placeholder="Ya apna custom naam likhein...">
-          <button class="copy-invite-btn" onclick="generatePersonalizedInvite()">✨ Copy WhatsApp Invite Message</button>
-        </div>
-
-        <div class="cover-eyebrow" style="margin-top:4px;">Confirm Your Warm Presence</div>
-        <div class="rsvp-mini-buttons">
-          <a class="rsvp-wa-btn" href="https://wa.me/919971566545?text=Namaste!%20I%20will%20be%20happy%20to%20attend%20Anisha%20%26%20Aditya%27s%20wedding." target="_blank">
-            Confirm to 9971566545
-          </a>
-          <a class="rsvp-wa-btn" href="https://wa.me/919565841950?text=Namaste!%20I%20will%20be%20happy%20to%20attend%20Anisha%20%26%20Aditya%27s%20wedding." target="_blank">
-            Confirm to 9565841950
-          </a>
-        </div>
-
-        <div style="font-size:10px; letter-spacing:2px; color:var(--gold-deep); margin-top:14px; text-transform:uppercase; font-weight:700;">
-          With Love — Baniya Pariwar
-        </div>
-      </section>
-
+      <div class="event-card event-wedding">
+        <div class="event-icon">💍</div>
+        <h3>Vivah Sanskar</h3>
+        <div class="day">Tuesday, 24 November 2026</div>
+        <div class="time">7:00 PM onwards</div>
+        <a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+-+Anisha+%26+Aditya&dates=20261124T133000Z/20261124T183000Z&details=Wedding+Ceremony+of+Anisha+%26+Aditya&location=Shripur%2C+Ballia" target="_blank">
+          📅 Add Wedding to Calendar
+        </a>
+      </div>
     </div>
-  </main>
+  </section>
 
-  <!-- Bottom Navigation Pagination Bar -->
-  <nav class="bottom-bar">
-    <button class="nav-arrow" onclick="changePage(-1)" aria-label="Previous Page">❮</button>
-    <div class="dots-indicator">
-      <div class="dot active" onclick="jumpToPage(1)"></div>
-      <div class="dot" onclick="jumpToPage(2)"></div>
-      <div class="dot" onclick="jumpToPage(3)"></div>
-      <div class="dot" onclick="jumpToPage(4)"></div>
-      <div class="dot" onclick="jumpToPage(5)"></div>
+  <section class="venue-section">
+    <div class="section-eyebrow">The Venue</div>
+    <h2 class="section-heading">Shripur, Ballia</h2>
+    <div class="divider">✦ ✤ ✦</div>
+    <p class="venue-address">
+      With the blessings of our families, we invite you to celebrate this auspicious beginning with us.
+    </p>
+    <a class="map-button" href="https://www.google.com/maps/search/?api=1&query=Shripur%2C%20Ballia" target="_blank">
+      Get Directions (Google Maps) 📍
+    </a>
+  </section>
+
+  <section class="custom-invite-tool">
+    <div class="section-eyebrow">Personalized Invite Generator</div>
+    <h2 class="section-heading">Create VIP Personalized Link</h2>
+    <div class="divider">✦ ✤ ✦</div>
+
+    <div class="tool-box">
+      <p class="tool-desc">
+        Rishtedaar ya doston ka button chunein ya apna custom naam likhein:
+      </p>
+
+      <div class="category-label">👑 Elders & Relatives:</div>
+      <div class="quick-tags">
+        <button class="tag-btn" onclick="setGuestData('Aadarneeya Mama Ji & Mami Ji', 'respect')">🌸 Mama Ji</button>
+        <button class="tag-btn" onclick="setGuestData('Aadarneeya Nana Ji & Nani Ji', 'respect')">🌸 Nana Ji</button>
+        <button class="tag-btn" onclick="setGuestData('Aadarneeya Chacha Ji & Chachi Ji', 'respect')">🌸 Chacha Ji</button>
+        <button class="tag-btn" onclick="setGuestData('Pyare Bua Ji & Phupha Ji', 'respect')">🌸 Bua Ji</button>
+        <button class="tag-btn" onclick="setGuestData('Aadarneeya Mausi Ji & Mausa Ji', 'respect')">🌸 Mausi Ji</button>
+      </div>
+
+      <div class="category-label">🎉 Friends, Siblings & Jija Ji:</div>
+      <div class="quick-tags">
+        <button class="tag-btn" onclick="setGuestData('Mere Pyare Dost / Yaar', 'friend')">🥂 Mere Pyare Dost</button>
+        <button class="tag-btn" onclick="setGuestData('Mere Pyare Bhai', 'friend')">❤️ Pyare Bhai</button>
+        <button class="tag-btn" onclick="setGuestData('Meri Pyari Behan', 'friend')">✨ Pyari Behan</button>
+        <button class="tag-btn" onclick="setGuestData('Pyare Jija Ji & Didi', 'friend')">💐 Jija Ji & Didi</button>
+        <button class="tag-btn" onclick="setGuestData('The Wedding VIP Gang', 'friend')">🔥 VIP Friends Gang</button>
+      </div>
+
+      <input type="text" id="guestNameInput" class="custom-input" placeholder="Ya apna custom naam likhein (e.g. Rahul, Priya, Sharma Pariwar)...">
+
+      <button class="create-link-btn" onclick="generatePersonalizedLink()">
+        ✨ Copy WhatsApp Invite with Name
+      </button>
     </div>
-    <button class="nav-arrow" onclick="changePage(1)" aria-label="Next Page">❯</button>
-  </nav>
+  </section>
 
-  <!-- SCRIPTS -->
+  <section class="rsvp-section">
+    <div class="section-eyebrow">RSVP</div>
+    <h2 class="section-heading">Join Our Celebration</h2>
+    <div class="divider">✦ ✤ ✦</div>
+    <p class="rsvp-desc">
+      Aapki upsthiti hamare parivaar ke liye mangalkaari hogi. Kripya apna warm confirmation WhatsApp par dein:
+    </p>
+
+    <div class="rsvp-buttons-group">
+      <a class="whatsapp-btn" href="https://wa.me/919971566545?text=Namaste!%20I%20will%20be%20happy%20to%20attend%20Anisha%20%26%20Aditya%27s%20wedding%20celebration." target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.077-2.222-.555-1.944-.805-3.184-2.775-3.281-2.905-.097-.129-.785-1.042-.785-1.988 0-.946.495-1.411.671-1.605.176-.194.384-.243.512-.243.128 0 .256.002.368.007.118.006.277-.045.433.329.16.384.544 1.328.592 1.425.048.097.08.21.016.339-.064.13-.096.21-.192.324-.096.113-.203.253-.29.34-.097.097-.198.203-.085.397.112.194.5 1.026 1.072 1.536.736.656 1.357.86 1.55.957.192.097.304.081.416-.048.113-.13.48-.564.608-.758.128-.194.256-.161.433-.097.176.065 1.12.528 1.312.624.192.097.32.145.368.226.048.08.048.468-.096.873z"/></svg>
+        Confirm with 9971566545
+      </a>
+
+      <a class="whatsapp-btn" href="https://wa.me/919565841950?text=Namaste!%20I%20will%20be%20happy%20to%20attend%20Anisha%20%26%20Aditya%27s%20wedding%20celebration." target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.077-2.222-.555-1.944-.805-3.184-2.775-3.281-2.905-.097-.129-.785-1.042-.785-1.988 0-.946.495-1.411.671-1.605.176-.194.384-.243.512-.243.128 0 .256.002.368.007.118.006.277-.045.433.329.16.384.544 1.328.592 1.425.048.097.08.21.016.339-.064.13-.096.21-.192.324-.096.113-.203.253-.29.34-.097.097-.198.203-.085.397.112.194.5 1.026 1.072 1.536.736.656 1.357.86 1.55.957.192.097.304.081.416-.048.113-.13.48-.564.608-.758.128-.194.256-.161.433-.097.176.065 1.12.528 1.312.624.192.097.32.145.368.226.048.08.048.468-.096.873z"/></svg>
+        Confirm with 9565841950
+      </a>
+
+      <a class="whatsapp-btn" href="https://wa.me/919305494206?text=Namaste!%20I%20will%20be%20happy%20to%20attend%20Anisha%20%26%20Aditya%27s%20wedding%20celebration." target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.077-2.222-.555-1.944-.805-3.184-2.775-3.281-2.905-.097-.129-.785-1.042-.785-1.988 0-.946.495-1.411.671-1.605.176-.194.384-.243.512-.243.128 0 .256.002.368.007.118.006.277-.045.433.329.16.384.544 1.328.592 1.425.048.097.08.21.016.339-.064.13-.096.21-.192.324-.096.113-.203.253-.29.34-.097.097-.198.203-.085.397.112.194.5 1.026 1.072 1.536.736.656 1.357.86 1.55.957.192.097.304.081.416-.048.113-.13.48-.564.608-.758.128-.194.256-.161.433-.097.176.065 1.12.528 1.312.624.192.097.32.145.368.226.048.08.048.468-.096.873z"/></svg>
+        Confirm with 9305494206
+      </a>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="closing-text">
+      <div class="section-eyebrow">Save the Date</div>
+      <h2>Anisha & Aditya</h2>
+      <div class="divider">✦ ✤ ✦</div>
+      <p>Two hearts, one beautiful journey, and a lifetime of togetherness.</p>
+      <div class="family-signature">WITH LOVE & BLESSINGS — BANIYA PARIWAR</div>
+    </div>
+  </section>
+
   <script>
-    /* 1. INTERACTIVE 3D PAGE NAVIGATION */
-    let currentPage = 1;
-    const totalPages = 5;
-    const pages = document.querySelectorAll('.book-page');
-    const dots = document.querySelectorAll('.dot');
-    const counter = document.getElementById('pageCounter');
-
-    function updatePage() {
-      pages.forEach(p => {
-        const pageNum = parseInt(p.dataset.page);
-        p.classList.remove('active', 'prev-page');
-        if (pageNum === currentPage) {
-          p.classList.add('active');
-        } else if (pageNum < currentPage) {
-          p.classList.add('prev-page');
-        }
-      });
-
-      dots.forEach((d, idx) => {
-        d.classList.toggle('active', idx + 1 === currentPage);
-      });
-
-      counter.innerText = `PAGE ${currentPage} OF ${totalPages}`;
-
-      // Start music automatically on first page turn if paused
-      const music = document.getElementById('weddingMusic');
-      if (currentPage > 1 && music.paused) {
-        music.play().then(() => {
-          document.getElementById('musicToggleBtn').innerText = '❚❚';
-        }).catch(() => {});
-      }
-    }
-
-    function changePage(delta) {
-      currentPage += delta;
-      if (currentPage < 1) currentPage = 1;
-      if (currentPage > totalPages) currentPage = totalPages;
-      updatePage();
-    }
-
-    function jumpToPage(num) {
-      currentPage = num;
-      updatePage();
-    }
-
-    // Touch Swipe Gesture Detection for Mobile
-    let touchStartX = 0;
-    let touchEndX = 0;
-    const bookStage = document.getElementById('bookViewport');
-
-    bookStage.addEventListener('touchstart', e => {
-      touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
-
-    bookStage.addEventListener('touchend', e => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    }, { passive: true });
-
-    function handleSwipe() {
-      if (touchStartX - touchEndX > 50) {
-        changePage(1); // Swipe left -> Next page
-      } else if (touchEndX - touchStartX > 50) {
-        changePage(-1); // Swipe right -> Prev page
-      }
-    }
-
-    /* 2. AUDIO TOGGLE */
-    const music = document.getElementById('weddingMusic');
-    const musicBtn = document.getElementById('musicToggleBtn');
-
-    function toggleMusic() {
-      if (music.paused) {
-        music.play();
-        musicBtn.innerText = '❚❚';
-      } else {
-        music.pause();
-        musicBtn.innerText = '♫';
-      }
-    }
-
-    /* 3. FALLING ROSE PETALS */
+    /* 1. PETALS ANIMATION */
     const pCanvas = document.getElementById('petalsCanvas');
     const pCtx = pCanvas.getContext('2d');
     let petals = [];
@@ -871,16 +986,17 @@
       reset() {
         this.x = Math.random() * pCanvas.width;
         this.y = -20 - Math.random() * 50;
-        this.size = Math.random() * 11 + 9;
-        this.speedY = Math.random() * 1.4 + 0.7;
+        this.size = Math.random() * 12 + 10;
+        this.speedY = Math.random() * 1.5 + 0.8;
         this.speedX = Math.sin(Math.random() * Math.PI) * 1.2;
         this.angle = Math.random() * 360;
         this.spin = Math.random() * 0.04 - 0.02;
-        this.opacity = Math.random() * 0.45 + 0.45;
+        this.opacity = Math.random() * 0.4 + 0.5;
         const colors = [
           `rgba(224, 102, 102, ${this.opacity})`,
           `rgba(217, 83, 79, ${this.opacity})`,
-          `rgba(212, 175, 55, ${this.opacity})`
+          `rgba(235, 148, 148, ${this.opacity})`,
+          `rgba(203, 161, 67, ${this.opacity})`
         ];
         this.color = colors[Math.floor(Math.random() * colors.length)];
       }
@@ -904,7 +1020,7 @@
       }
     }
 
-    for (let i = 0; i < 30; i++) petals.push(new RosePetal());
+    for (let i = 0; i < 35; i++) { petals.push(new RosePetal()); }
 
     function animatePetals() {
       pCtx.clearRect(0, 0, pCanvas.width, pCanvas.height);
@@ -913,48 +1029,128 @@
     }
     animatePetals();
 
-    /* 4. COUNTDOWN */
+    /* 2. DYNAMIC GUEST PERSONALIZATION CHECK ON LOAD */
+    const urlParams = new URLSearchParams(window.location.search);
+    const guestParam = urlParams.get('to');
+    const guestEl = document.getElementById('guestGreeting');
+    if (guestParam) {
+      guestEl.innerText = `Special Invitation For: ${decodeURIComponent(guestParam)} ✨`;
+    }
+
+    /* 3. CINEMATIC TYPEWRITER IN OPENING */
+    function typeText(elementId, text, speed) {
+      return new Promise(resolve => {
+        const el = document.getElementById(elementId);
+        el.innerHTML = '<span class="typing-cursor"></span>';
+        let i = 0;
+        const timer = setInterval(() => {
+          if (i < text.length) {
+            el.innerHTML = text.substring(0, i + 1) + '<span class="typing-cursor"></span>';
+            i++;
+          } else {
+            clearInterval(timer);
+            el.innerHTML = text;
+            resolve();
+          }
+        }, speed);
+      });
+    }
+
+    async function runOpeningSequence() {
+      await new Promise(r => setTimeout(r, 350));
+      await typeText('typeBadge', 'WITH THE BLESSINGS OF OUR FAMILIES', 40);
+      await new Promise(r => setTimeout(r, 150));
+      await typeText('typeBlessing', 'We invite you to celebrate a beautiful beginning with us', 30);
+      await new Promise(r => setTimeout(r, 200));
+      await typeText('typeNames', 'Anisha  &  Aditya', 60);
+      await new Promise(r => setTimeout(r, 150));
+      await typeText('typeDate', '24 NOVEMBER 2026 · SHRIPUR, BALLIA', 35);
+      document.getElementById('openBtnWrap').classList.add('show');
+    }
+    window.addEventListener('DOMContentLoaded', runOpeningSequence);
+
+    /* 4. OPEN INVITATION & MUSIC */
+    const music = document.getElementById('weddingMusic');
+    const musicBtn = document.getElementById('musicToggleBtn');
+
+    function openInvitation() {
+      document.getElementById('openingOverlay').classList.add('hide');
+      music.play().then(() => {
+        musicBtn.innerHTML = '❚❚';
+      }).catch(err => {
+        console.log('Audio autoplay prevented:', err);
+      });
+    }
+
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+        musicBtn.innerHTML = '❚❚';
+      } else {
+        music.pause();
+        musicBtn.innerHTML = '♫';
+      }
+    }
+
+    /* 5. COUNTDOWN TIMER */
     const targetWeddingTime = new Date('November 24, 2026 19:00:00').getTime();
+
     function updateCountdown() {
       const now = new Date().getTime();
       const diff = targetWeddingTime - now;
-      if (diff <= 0) return;
-      document.getElementById('days').innerText = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
-      document.getElementById('hours').innerText = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
-      document.getElementById('minutes').innerText = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-      document.getElementById('seconds').innerText = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+
+      if (diff <= 0) {
+        document.getElementById('days').innerText = '00';
+        document.getElementById('hours').innerText = '00';
+        document.getElementById('minutes').innerText = '00';
+        document.getElementById('seconds').innerText = '00';
+        return;
+      }
+
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('days').innerText = String(d).padStart(2, '0');
+      document.getElementById('hours').innerText = String(h).padStart(2, '0');
+      document.getElementById('minutes').innerText = String(m).padStart(2, '0');
+      document.getElementById('seconds').innerText = String(s).padStart(2, '0');
     }
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
-    /* 5. GUEST PERSONALIZATION LOGIC */
-    const urlParams = new URLSearchParams(window.location.search);
-    const guestParam = urlParams.get('to');
-    if (guestParam) {
-      document.getElementById('coverGuestName').innerText = `Special Invite: ${decodeURIComponent(guestParam)} ✨`;
-    }
-
+    /* 6. TOOL LOGIC: SELECT NAME & SMART MESSAGE (ELDERS VS FRIENDS) */
     let selectedTone = 'respect';
+
     function setGuestData(name, tone) {
-      document.getElementById('guestInputBox').value = name;
+      document.getElementById('guestNameInput').value = name;
       selectedTone = tone;
     }
 
-    function generatePersonalizedInvite() {
-      const rawName = document.getElementById('guestInputBox').value.trim();
+    function generatePersonalizedLink() {
+      const rawName = document.getElementById('guestNameInput').value.trim();
       const baseUrl = "https://onlyzxwear.github.io/anisha-aditya-wedding/";
+      
       let finalUrl = baseUrl;
-      if (rawName) finalUrl += "?to=" + encodeURIComponent(rawName);
-
-      let msg = "";
-      if (selectedTone === 'friend') {
-        msg = `🎉 *Hey ${rawName || 'Dost'}!* 💍✨\n\nHamari pyari sister *Anisha aur Aditya* ki shaadi ki date final ho gayi hai!\n\n📅 23 & 24 Nov 2026 · Shripur, Ballia\n\nNeeche diye gaye link par tap karke apna Royal Wedding Storybook open karo: 👇\n${finalUrl}\n\n— *Baniya Pariwar*`;
-      } else {
-        msg = `🌸 *॥ श्री गणेशाय नमः ॥* 🌸\n\nPranaam ${rawName || 'Aapko aur Pariwar ko'}! 🙏\n\nHamari laadli sister *Anisha aur Aditya* ke shubh vivah mein aapka aashirwaad prarthaniya hai.\n\n💍 24 November 2026 · Shripur, Ballia\n\nDigital Storybook Card: 👇\n${finalUrl}\n\n— *With Love, Baniya Pariwar*`;
+      if (rawName) {
+        finalUrl += "?to=" + encodeURIComponent(rawName);
       }
 
-      navigator.clipboard.writeText(msg).then(() => {
-        alert("Personalized WhatsApp Message Copied! 💍");
+      let whatsappText = "";
+
+      if (selectedTone === 'friend') {
+        const guestName = rawName || "Mere Bhai / Dost";
+        whatsappText = `🎉 *Hey ${guestName}!* 💍✨\n\nHamari pyari sister *Anisha aur Aditya* ki shaadi final ho gayi hai, aur tumhara aana 100% compulsory hai! Shripur, Ballia mein poori dhoom aur masti karni hai! 💃🕺\n\n📅 *Haldi & Sangeet:* 23 November 2026\n💍 *Wedding:* 24 November 2026\n📍 *Venue:* Shripur, Ballia\n\nNeeche diye gaye link par tap karke apna personal VIP invite open karo: 👇\n${finalUrl}\n\n— *With Love, Baniya Pariwar*`;
+      } else {
+        const guestName = rawName || "Aapko aur aapke poore pariwar ko";
+        whatsappText = `🌸 *॥ श्री गणेशाय नमः ॥* 🌸\n\nPranaam ${guestName}! 🙏\n\nHamari laadli bitiya/sister *Anisha aur Aditya* ke shubh vivah utsav mein aapka aashirwaad aur mangal upsthiti sadar prarthaniya hai.\n\n💍 *Vivah Sanskar:* 24 November 2026\n📍 *Venue:* Shripur, Ballia\n\nNeeche diye gaye link par tap karke apna digital invitation card dekhein: 👇\n${finalUrl}\n\n— *With Love & Respect, Baniya Pariwar*`;
+      }
+
+      navigator.clipboard.writeText(whatsappText).then(() => {
+        alert(`VIP WhatsApp Invite copied for: ${rawName || 'Guest'}!\n\nAb seedha WhatsApp par paste kar dijiye! ✨`);
+      }).catch(() => {
+        prompt("Copy this invite message:", whatsappText);
       });
     }
   </script>
