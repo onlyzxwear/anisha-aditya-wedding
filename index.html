@@ -6,11 +6,11 @@
   
   <title>Anisha & Aditya | Wedding Invitation 💍</title>
 
-  <meta name="description" content="Two hearts, one beautiful journey. Join us to celebrate the wedding of Anisha & Aditya on 23 & 24 November 2026 at Shripur, Ballia.">
+  <meta name="description" content="Two hearts, one beautiful journey. Join us to celebrate the wedding of Anisha & Aditya on 22, 23 & 24 November 2026 at Shripur, Ballia.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://onlyzxwear.github.io/anisha-aditya-wedding/">
   <meta property="og:title" content="Anisha & Aditya | Wedding Invitation 💍">
-  <meta property="og:description" content="॥ श्री गणेशाय नमः ॥ We invite you to celebrate our special beginning. 23 & 24 November 2026 · Shripur, Ballia.">
+  <meta property="og:description" content="॥ श्री गणेशाय नमः ॥ We invite you to celebrate our special beginning. 22, 23 & 24 November 2026 · Shripur, Ballia.">
   <meta property="og:image" content="https://onlyzxwear.github.io/anisha-aditya-wedding/bride-groom.png">
   <meta property="og:image:secure_url" content="https://onlyzxwear.github.io/anisha-aditya-wedding/bride-groom.png">
   <meta property="og:image:type" content="image/png">
@@ -117,7 +117,7 @@
       line-height: 1.4;
     }
 
-    /* COMPACT OPENING SCREEN - NO SCROLL NEEDED */
+    /* COMPACT OPENING SCREEN */
     .opening {
       position: fixed;
       inset: 0;
@@ -219,7 +219,6 @@
       pointer-events: none;
     }
 
-    /* COMPACT GANESH BLESSING EMBLEM */
     .opening-ganesh-frame {
       display: flex;
       flex-direction: column;
@@ -623,7 +622,7 @@
       display: block;
     }
 
-    /* EVENTS - ORIGINAL DATES & REMINDER LINKS */
+    /* EVENTS - ACCURATE AS PER FILE */
     .events {
       padding: 70px 20px;
       text-align: center;
@@ -699,7 +698,7 @@
       color: #ffffff;
     }
 
-    /* FAMILY SECTION - CLEAN & ACCURATE */
+    /* FAMILY SECTION */
     .family-section {
       padding: 65px 20px;
       text-align: center;
@@ -794,7 +793,7 @@
       font-weight: 600;
     }
 
-    /* VENUE - ORIGINAL LOCATION & MAP BUTTON */
+    /* VENUE */
     .venue-section {
       padding: 70px 20px;
       text-align: center;
@@ -825,11 +824,18 @@
       transform: translateY(-2px);
     }
 
-    /* CUSTOMIZE INVITATION TOOL */
+    /* =========================================
+       SECRET ADMIN GENERATOR TOOL (HIDDEN BY DEFAULT)
+    ========================================= */
     .custom-invite-tool {
+      display: none; /* By default hidden from normal guests */
       padding: 75px 20px;
       text-align: center;
       background: #ffffff;
+    }
+
+    .custom-invite-tool.show-admin {
+      display: block !important; /* Visible ONLY when ?admin=true */
     }
 
     .tool-box {
@@ -1184,7 +1190,7 @@
         <h3>Haldi Ceremony</h3>
         <div class="day">Sunday, 22 November 2026</div>
         <div class="time">10:30 AM onwards</div>
-        <a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Haldi+-+Anisha+%26+Aditya+Wedding&dates=20261123T050000Z/20261123T080000Z&details=Haldi+Ceremony+of+Anisha+%26+Aditya&location=Shripur%2C+Ballia" target="_blank">
+        <a class="cal-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Haldi+-+Anisha+%26+Aditya+Wedding&dates=20261122T050000Z/20261122T080000Z&details=Haldi+Ceremony+of+Anisha+%26+Aditya&location=Shripur%2C+Ballia" target="_blank">
           📅 Add Haldi to Calendar
         </a>
       </div>
@@ -1211,7 +1217,7 @@
     </div>
   </section>
 
-  <!-- FAMILY SECTION - CLEANED UP -->
+  <!-- FAMILY SECTION -->
   <section class="family-section">
     <div class="section-eyebrow">Our Family Blessings</div>
     <h2 class="section-heading">परम पूज्य परिवार</h2>
@@ -1256,8 +1262,6 @@
     </div>
   </section>
 
-  <!-- VENUE - ORIGINAL EXACT CODE -->
-  <section class="venue-section">
   <!-- VENUE SECTION -->
   <section class="venue-section">
     <div class="section-eyebrow">The Venue</div>
@@ -1271,10 +1275,9 @@
     </a>
   </section>
 
-
-  <!-- CUSTOMIZE INVITATION TOOL -->
-  <section class="custom-invite-tool">
-    <div class="section-eyebrow">Personalized Invite Generator</div>
+  <!-- SECRET ADMIN GENERATOR TOOL (HIDDEN BY DEFAULT) -->
+  <section class="custom-invite-tool" id="adminInviteTool">
+    <div class="section-eyebrow">🔒 Host VIP Generator (Private)</div>
     <h2 class="section-heading">Create VIP Personalized Link</h2>
     <div class="divider">✦ ✤ ✦</div>
 
@@ -1416,6 +1419,14 @@
       guestEl.innerText = `Special Invitation For: ${decodeURIComponent(guestParam)} ✨`;
     }
 
+    /* 2b. CHECK FOR ADMIN SECRET URL (?admin=true) */
+    if (urlParams.get('admin') === 'true') {
+      const adminTool = document.getElementById('adminInviteTool');
+      if (adminTool) {
+        adminTool.classList.add('show-admin');
+      }
+    }
+
     /* 3. CINEMATIC STAGED OPENING */
     function revealText(elementId, text, delay = 0) {
       return new Promise(resolve => {
@@ -1505,7 +1516,7 @@
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
-    /* 6. TOOL LOGIC: SELECT NAME & SMART MESSAGE */
+    /* 6. TOOL LOGIC: SELECT NAME & SMART MESSAGE (UPDATED WITH 22, 23 & 24 NOV DATES) */
     let selectedTone = 'respect';
 
     function setGuestData(name, tone) {
@@ -1526,16 +1537,16 @@
 
       if (selectedTone === 'friend') {
         const guestName = rawName || "Mere Bhai / Dost";
-        whatsappText = `🎉 *Hey ${guestName}!* 💍✨\n\nHamari pyari sister *Anisha aur Aditya* ki shaadi final ho gayi hai, aur tumhara aana 100% compulsory hai! Shripur, Ballia mein poori dhoom aur masti karni hai! 💃🕺\n\n📅 *Haldi & Sangeet:* 23 November 2026\n💍 *Wedding:* 24 November 2026\n📍 *Venue:* Shripur, Ballia\n\nNeeche diye gaye link par tap karke apna personal VIP invite open karo: 👇\n${finalUrl}\n\n— *With Love, Baniya Pariwar*`;
+        whatsappText = `🎉 *Hey ${guestName}!* 💍✨\n\nHamari pyari sister *Anisha aur Aditya* ki shaadi final ho gayi hai, aur tumhara aana 100% compulsory hai! Shripur, Ballia mein poori dhoom machani hai! 💃🕺\n\n🌼 *Haldi:* Sunday, 22 November 2026 (10:30 AM)\n🎶 *Sangeet:* Monday, 23 November 2026 (3:00 PM)\n💍 *Wedding:* Tuesday, 24 November 2026 (7:00 PM)\n📍 *Venue:* Shripur, Ballia\n\nNeeche diye gaye link par tap karke apna personal VIP invite open karo: 👇\n${finalUrl}\n\n— *With Love, Baniya Pariwar*`;
       } else {
-        const guestName = rawName || "Aapko aur aapke poore pariwar ko";
-        whatsappText = `🌸 *॥ श्री गणेशाय नमः ॥* 🌸\n\nPranaam ${guestName}! 🙏\n\nHamari laadli bitiya/sister *Anisha aur Aditya* ke shubh vivah utsav mein aapka aashirwaad aur mangal upsthiti sadar prarthaniya hai.\n\n💍 *Vivah Sanskar:* 24 November 2026\n📍 *Venue:* Shripur, Ballia\n\nNeeche diye gaye link par tap karke apna digital invitation card dekhein: 👇\n${finalUrl}\n\n— *With Love & Respect, Baniya Pariwar*`;
+        const guestName = rawName || "Aadarneeya Pariwar";
+        whatsappText = `🌸 *॥ श्री गणेशाय नमः ॥* 🌸\n\nPranaam ${guestName}! 🙏\n\nHamari laadli bitiya/sister *Anisha aur Aditya* ke shubh vivah utsav mein aapka aashirwaad aur mangal upsthiti sadar prarthaniya hai.\n\n🌼 *हल्दी:* Sunday, 22 November 2026 (10:30 AM onwards)\n🎶 *संगीत:* Monday, 23 November 2026 (3:00 PM onwards)\n💍 *विवाह संस्कार:* Tuesday, 24 November 2026 (7:00 PM onwards)\n📍 *Venue:* Shripur, Ballia\n\nNeeche diye gaye link par tap karke apna digital invitation card dekhein:\n👇\n${finalUrl}\n\n— *With Love & Respect, Baniya Pariwar*`;
       }
 
       navigator.clipboard.writeText(whatsappText).then(() => {
-        alert(`VIP WhatsApp Invite copied for: ${rawName || 'Guest'}!\n\nAb seedha WhatsApp par paste kar dijiye! ✨`);
+        alert(`Full WhatsApp Invite copied for: ${rawName || 'Guest'}!\n\nAb WhatsApp par paste kar dijiye! ✨`);
       }).catch(() => {
-        prompt("Copy this invite message:", whatsappText);
+        prompt("Copy message:", whatsappText);
       });
     }
 
